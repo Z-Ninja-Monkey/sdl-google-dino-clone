@@ -3,11 +3,14 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
+#include "testFunction.h"
+
 #define SCREEN_WIDTH 800
 #define SCREEN_HIGHT 500
 
 
 int main(int argc, char *argv[]){
+    TestFunction();
 
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window *window = SDL_CreateWindow("Google Dino", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HIGHT, SDL_WINDOW_SHOWN);

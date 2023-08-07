@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-Wall -Wextra -g -std=c++17
+CFLAGS=-Wall -Wextra -g -std=c++17 
 
 SRC_DIR=src
 BIN_DIR=bin
