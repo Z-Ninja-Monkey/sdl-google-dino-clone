@@ -8,12 +8,13 @@
 #define SCREEN_WIDTH 800
 #define SCREEN_HIGHT 500
 
+SDL_Renderer *renderer;
 
 int main(int argc, char *argv[]){
 
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window *window = SDL_CreateWindow("Google Dino", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HIGHT, SDL_WINDOW_SHOWN);
-    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     SDL_Color bg = {255,255,255,255};
 
@@ -90,7 +91,7 @@ int main(int argc, char *argv[]){
             dino.texture = 1;
         } else if (dino.y < 290){
             dino.falling = true;
-            if(gravity < 20){gravity *= 1.2;}
+            if(gravity < 20){gravity *= (gravity * 0.2);}
             dino.y -= 5 - gravity;
             dino.texture = 1;
         } else {
@@ -107,7 +108,7 @@ int main(int argc, char *argv[]){
 
     
 
-        if(frameCount1 == legSpeed * 2){
+        if(frameCount1 == dino.legSpeed * 2){
             frameCount1 = 0;
         }
 

@@ -14,13 +14,13 @@ int y = 300;
 bool falling = false;
 
 SDL_Texture* dinoTexture1;
-    SDL_Texture* dinoTexture2;
-    SDL_Texture* dinoTexture3;
-    SDL_Texture* dinoTexture4;
-    SDL_Texture* dinoTexture5;
-    SDL_Texture* dinoTexture6;
-    SDL_Texture* dinoTexture7;
-    SDL_Texture* dinoTexture8;
+SDL_Texture* dinoTexture2;
+SDL_Texture* dinoTexture3;
+SDL_Texture* dinoTexture4;
+SDL_Texture* dinoTexture5;
+SDL_Texture* dinoTexture6;
+SDL_Texture* dinoTexture7;
+SDL_Texture* dinoTexture8;
 
 Dino::Dino(SDL_Renderer *inRenderer){
     std::cout << "initalizing dino" << std::endl;
